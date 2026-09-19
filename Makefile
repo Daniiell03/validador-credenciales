@@ -35,7 +35,7 @@ $(BIN)/test_credencial: $(TEST_SRC) src/credencial.h tests/minitest.h
 ## analyze: analisis estatico con cppcheck
 analyze:
 	@mkdir -p $(REPORTS)
-	cppcheck --enable=warning,style --error-exitcode=0 \\
+	cppcheck --enable=warning,style --error-exitcode=0 \
 	         --quiet --inline-suppr -Isrc src/ 2>&1 | tee $(REPORTS)/cppcheck.txt
 	@echo "OK: analisis estatico completado"
 
