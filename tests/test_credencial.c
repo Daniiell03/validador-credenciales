@@ -88,6 +88,14 @@ int main(void)
     printf("Pruebas del validador de credenciales\n");
     printf("-------------------------------------\n");
 
+    MT_PRUEBA(test_formato_acepta_ocho_digitos);
+    MT_PRUEBA(test_formato_rechaza_corta);
+    MT_PRUEBA(test_formato_rechaza_larga);
+    MT_PRUEBA(test_formato_rechaza_letra);
+    MT_PRUEBA(test_formato_rechaza_nulo);
+    MT_PRUEBA(test_checksum_suma_modulo_diez);
+    MT_PRUEBA(test_checksum_suma_pequena);
+    MT_PRUEBA(test_checksum_rechaza_invalida);
     MT_PRUEBA(test_autoriza_credencial_valida);
     MT_PRUEBA(test_rechaza_formato_invalido);
     MT_PRUEBA(test_rechaza_checksum_erroneo);
